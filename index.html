@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExpenseGuy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            overflow-x: hidden;
+        }
+        .gradient-bg {
+            background: linear-gradient(to right, #fff5e6, #ffe4b5);
+        }
+        .tech-icon {
+            transition: transform 0.3s ease;
+        }
+        .tech-icon:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="gradient-bg">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <h1 class="text-2xl font-bold text-orange-600">ExpenseGuy</h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="#home" class="text-gray-900 hover:text-orange-600 px-3 py-2 text-sm font-medium">Home</a>
+                    <a href="#overview" class="text-gray-900 hover:text-orange-600 px-3 py-2 text-sm font-medium">Overview</a>
+                    <a href="#stats" class="text-gray-900 hover:text-orange-600 px-3 py-2 text-sm font-medium">Statistics</a>
+                    <a href="#tracker" class="text-gray-900 hover:text-orange-600 px-3 py-2 text-sm font-medium">Tracker</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center text-center p-6">
+        <div>
+            <div class="flex justify-center space-x-4 mb-6">
+                <span class="tech-icon"><img src="https://img.icons8.com/ios-filled/50/000000/robot.png" alt="AI"></span>
+                <span class="tech-icon"><img src="https://img.icons8.com/ios-filled/50/000000/settings.png" alt="Settings"></span>
+                <span class="tech-icon"><img src="https://img.icons8.com/ios-filled/50/000000/database.png" alt="Database"></span>
+                <span class="tech-icon"><img src="https://img.icons8.com/ios-filled/50/000000/cloud.png" alt="Cloud"></span>
+                <span class="tech-icon"><img src="https://img.icons8.com/ios-filled/50/000000/microchip.png" alt="Microchip"></span>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold text-orange-600 mb-4">"Powered by Technology,<br>Driven by Solutions."</h1>
+            <h2 class="text-3xl md:text-5xl font-bold text-black mb-6">ExpenseGuy <span class="text-orange-600">↑</span></h2>
+            <p class="text-lg md:text-xl text-gray-600 mb-6">Monitor your Money!</p>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="py-20 bg-white text-center">
+        <h2 class="text-4xl font-bold text-black mb-12">Overview</h2>
+        <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-8">Expense Tracker is a SaaS platform which tracks your daily expenses and lets you manage your pocket. It is one bridge solution with credit to debit also it provides you with your salary management and tracks your daily expenditure.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <img src="https://img.icons8.com/ios-filled/50/000000/user.png" alt="Credit-Debit" class="mx-auto mb-4">
+                <h3 class="text-xl font-semibold text-black">Credit-Debit</h3>
+                <p class="text-gray-600">Manage your credit bills and receive reminders on due payments.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <img src="https://img.icons8.com/ios-filled/50/000000/search.png" alt="Graphs" class="mx-auto mb-4">
+                <h3 class="text-xl font-semibold text-black">Visualized Graphs</h3>
+                <p class="text-gray-600">Visualized graphs and stats to help you with your finance.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <img src="https://img.icons8.com/ios-filled/50/000000/bill.png" alt="Bills" class="mx-auto mb-4">
+                <h3 class="text-xl font-semibold text-black">Track your Bills</h3>
+                <p class="text-gray-600">Check on your monthly bills savings and track your expenditure.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section id="stats" class="py-20 bg-gray-100 text-center">
+        <h2 class="text-4xl font-bold text-black mb-12">Statistics</h2>
+        <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold text-black mb-4">Overall Summary</h3>
+                <p>Total Expenses (including debt): ₹46,290.00</p>
+                <p>Daily Spending: ₹2,178.66</p>
+                <p>Highest Expense Category: Travel</p>
+                <p>Lowest Expense Category: Entertainment</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold text-black mb-4">Expense by Category</h3>
+                <div class="flex justify-center space-x-2">
+                    <span class="w-6 h-6 bg-blue-500 rounded-full"></span>
+                    <span>Travel: ₹6,400</span>
+                </div>
+                <div class="flex justify-center space-x-2">
+                    <span class="w-6 h-6 bg-yellow-500 rounded-full"></span>
+                    <span>Food: ₹3,500</span>
+               </div>
+                <div class="flex justify-center space-x-2">
+                    <span class="w-6 h-6 bg-red-500 rounded-full"></span>
+                    <span>Entertainment: ₹2,000</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Multi-Action Finance Tracker Section -->
+    <section id="tracker" class="py-20 bg-white text-center">
+        <h2 class="text-4xl font-bold text-orange-600 mb-12">Multi-Action Finance Tracker</h2>
+        <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-8">One click bill payment: Pay your bills with a click. Track your finance: Keep Track of your payments. Manage your credit debit: Easily manage your credit dues</p>
+        <div class="bg-orange-100 text-black p-6 rounded-lg max-w-md mx-auto">
+            <h3 class="text-2xl font-bold">Balance your Expense!</h3>
+            <p class="text-xl">ExpenseGuy</p>
+        </div>
+    </section>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.from(".tech-icon", {
+            scrollTrigger: {
+                trigger: "#home",
+                start: "top 80%",
+            },
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            stagger: 0.2,
+            ease: "power2.out"
+        });
+
+        gsap.from("#overview div", {
+            scrollTrigger: {
+                trigger: "#overview",
+                start: "top 80%",
+            },
+            opacity: 0,
+            y: 50,
+            duration: 0.8,
+            stagger: 0.2,
+            ease: "power2.out"
+        });
+
+        gsap.from("#stats div", {
+            scrollTrigger: {
+                trigger: "#stats",
+                start: "top 80%",
+            },
+            opacity: 0,
+            y: 50,
+            duration: 0.8,
+            stagger: 0.2,
+            ease: "power2.out"
+        });
+
+        document.querySelectorAll('a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
